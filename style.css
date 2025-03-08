@@ -199,13 +199,20 @@ a:focus {
 }
 
 .grid__item-img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
-	z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 100;
+    opacity: 0; /* Ẩn mặc định */
+    transition: opacity 1s ease-in-out;
 }
+
+.grid__item-img.visible {
+    opacity: 1; /* Khi có class .visible, ảnh sẽ hiển thị */
+}
+
 
 .grid--img .grid__item-img {
 	flex: none;
